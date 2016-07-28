@@ -1,6 +1,6 @@
 {
   "name": "url-parsing",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Parses urls and canonical urls",
   "main": "src/index.js",
   "engines": {
