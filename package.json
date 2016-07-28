@@ -7,14 +7,15 @@
     "node": ">=6.0"
   },
   "scripts": {
-    "test": "mocha ./tests",
-    "test:watch": "mocha ./tests -w",
-    "precommit": "npm test",
-    "prepush": "npm test",
+    "lint": "echo \"linting service needed\"",
+    "precommit": "npm run lint",
     "prepublish": "echo \"Pre-publish hook TBD\" # This should have something",
-    "publish:patch": "npm version patch && git push && git push --tags && npm publish",
+    "prepush": "npm test",
+    "publish:major": "npm version major && git push && git push --tags && npm publish",
     "publish:minor": "npm version minor && git push && git push --tags && npm publish",
-    "publish:major": "npm version major && git push && git push --tags && npm publish"
+    "publish:patch": "npm version patch && git push && git push --tags && npm publish",
+    "test:watch": "mocha ./tests -w",
+    "test": "mocha ./tests"
   },
   "repository": {
     "type": "git",
