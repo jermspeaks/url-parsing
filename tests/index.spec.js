@@ -5,9 +5,9 @@ describe('urlParser', () => {
 	describe('parseUrlGroups', () => {
 		const urlScenarios = [{
 			testName: 'Full url',
-			testUrl: 'http://denverpost.com/2016/07/27/donald-trump-colorado-springs-denver-tickets/',
+			testUrl: 'http://denverpos.com/2016/07/27/donald-trump-colorado-springs-denver-tickets/',
 			expectedGroups: {
-				$D: 'denverpost.com',
+				$D: 'denverpos.com',
 				$P1: '2016',
 				$P2: '07',
 				$P3: '27',
