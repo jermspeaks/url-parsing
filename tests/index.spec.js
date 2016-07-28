@@ -24,7 +24,7 @@ describe('urlParser', () => {
 				$P4: '07',
 				$P5: '27',
 				$P6: 'facebook-shares-soar-on-sales-earnings-that-blow-away-estimates',
-				$H1: '#33da250329ae',
+				$H: '33da250329ae',
 			}
 		}];
 

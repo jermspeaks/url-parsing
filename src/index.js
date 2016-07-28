@@ -16,15 +16,22 @@ const parseUrlGroups = urlString => {
 	// Get matches from URL
 	var hostMatch = parseHostname(parsedUrl.hostname);
 	var pathMatches = parsePaths(parsedUrl.pathname);
+	var hashMatch = parsedUrl.hash;
 
 	// if hostname found, pass in hostname
 	if (!hostMatch) throw new Error('Hostname could not be found');
 	groups.$D = hostMatch;
 
+	// if pathnames found, add each of them incrementing the key by 1 starting at 1
 	if (pathMatches) {
 		pathMatches.forEach((path, pathIndex) => {
 			groups[`$P${pathIndex + 1}`] = path;
 		});
+	}
+
+	// If hash found, pass in hash without # symbol
+	if (hashMatch) {
+		groups.$H = hashMatch.replace('#', '');
 	}
 
 	// Return hostmatch only if no path matches found
