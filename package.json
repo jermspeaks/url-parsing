@@ -5,7 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha ./tests",
-    "test:watch": "mocha ./tests -w"
+    "test:watch": "mocha ./tests -w",
+    "precommit": "npm test",
+    "prepush": "npm test"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "homepage": "https://github.com/jermspeaks/url-parsing#readme",
   "devDependencies": {
     "expect": "^1.20.2",
+    "husky": "^0.11.6",
     "mocha": "^2.5.3"
   }
 }
