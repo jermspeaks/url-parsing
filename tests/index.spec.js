@@ -24,7 +24,15 @@ describe('urlParser', () => {
 				$P4: '07',
 				$P5: '27',
 				$P6: 'facebook-shares-soar-on-sales-earnings-that-blow-away-estimates',
-				$H: '33da250329ae',
+				$H: '33da250329ae'
+			}
+		}, {
+			testName: 'Full url with query params',
+			testUrl: 'https://plus.google.com/share?url=http%3A%2F%2Fwww.breitbart.com%2Fbig-government%2F2016%2F07%2F05%2Fhillary-clinton-obama-first-joint-campaign-event%2F&t=At+Joint+Event%2C+Hillary+Clinton+Offers+Third+Term+of+Barack+Obama',
+			expectedGroups: {
+				$D: 'plus.google.com',
+				$P1: 'share',
+				$Q: 'url=http%3A%2F%2Fwww.breitbart.com%2Fbig-government%2F2016%2F07%2F05%2Fhillary-clinton-obama-first-joint-campaign-event%2F&t=At+Joint+Event%2C+Hillary+Clinton+Offers+Third+Term+of+Barack+Obama'
 			}
 		}];
 

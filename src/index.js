@@ -17,7 +17,7 @@ const parseUrlGroups = urlString => {
 	var hostMatch = parseHostname(parsedUrl.hostname);
 	var pathMatches = parsePaths(parsedUrl.pathname);
 	var hashMatch = parsedUrl.hash;
-	// var queryMatches;
+	var queryMatches = parsedUrl.query;
 
 	// if hostname found, pass in hostname
 	if (!hostMatch) throw new Error('Hostname could not be found');
@@ -33,6 +33,10 @@ const parseUrlGroups = urlString => {
 	// If hash found, pass in hash without # symbol
 	if (hashMatch) {
 		groups.$H = hashMatch.replace('#', '');
+	}
+
+	if (queryMatches) {
+		groups.$Q = queryMatches;
 	}
 
 	// Return hostmatch only if no path matches found
